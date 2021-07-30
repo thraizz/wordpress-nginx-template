@@ -1,9 +1,5 @@
 # WordPress Docker behind NGINX Reverse Proxy
 
-A quick blog post about how I run my WordPress websites behind a reverse-proxy over one docker-compose file. 
-
-While some blogs tend to write a lengthy introduction into the topic the reader probably already knows, lets not. Lets just see how easy it is to combine the three and run a flawless website in under half an hour. Speedrun time!
-
 ## Setting up the containers
 
 Look at the `docker-compose.yml` first and be surprised by how easy the setup is:
