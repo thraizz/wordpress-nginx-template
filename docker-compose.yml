@@ -1,11 +1,11 @@
 version: "3"
 services:
-  proxy: 
+  nginx: 
     image: nginx:latest
+    restart: always
     container_name: production-nginx
     volumes:
       - /etc/letsencrypt/:/etc/letsencrypt/
-      - /etc/letsencrypt/live/lakur-full.tech:/etc/letsencrypt/live/example.com/
       - ./nginx/:/etc/nginx/
     ports:
       - "80:80"
@@ -21,6 +21,8 @@ services:
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - ./wordpress:/var/www/html
+    ports:
+      - "8080:80"
   db:
     image: mysql:5.7
     container_name: production-db
