@@ -16,7 +16,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-	wp:
+  wp:
     image: wordpress:latest
     restart: always
     container_name: production-wordpress
